@@ -40,7 +40,9 @@ while True:                             # The Event Loop
         if values['_ergebnis_'] != str(eval(question)):
             window.Element('_ergebnis_').Update(background_color='#880000')
         else:
-            window.Element('_ergebnis_').Update(background_color='#008800')
+            # TODO select entered value - maybe that does not work with SimpleUI -> fix that there?
+            window.Element('_ergebnis_').Update(background_color='#008800', select=True)
+            #window.Element('_ergebnis_').select()
             random.seed()
             question = values['_reihe_'] + ' * ' + str(random.randint(int(values['_von_']), int(values['_bis_'])))
             window.Element('_aufgabe_').Update(question)
