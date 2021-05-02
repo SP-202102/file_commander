@@ -15,6 +15,7 @@
 # TODO 3 - make folders to links / make links navigatable
 
 from file_functions.file_list import file_list
+#import file_functions.file_list
 
 # TODO move path to config -> later to db
 my_file_list = file_list( "L:\\" ) 
